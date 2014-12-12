@@ -1,0 +1,11 @@
+[Unit]
+	Description=Enables P9.12 & P9.14 as ouputs and set low, and P9.15 & P9.16 as inputs
+
+[Service]
+	WorkingDirectory=/home/debian/startAtBoot
+	ExecStart=/usr/bin/python dhsetup.py
+	Restart=on-failure
+	RestartSec=5
+
+[Install]
+	WantedBy=multi-user.target
